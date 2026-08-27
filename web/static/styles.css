@@ -1,0 +1,372 @@
+/* ============================================
+   J.A.R.V.I.S. - Hologram Interface
+   ============================================ */
+
+:root {
+    --cyan: #00d4ff;
+    --cyan-dim: #0099cc;
+    --cyan-dark: #006699;
+    --blue: #0088ff;
+    --gold: #ffd700;
+    --green: #00ff88;
+    --red: #ff3333;
+    --bg: #030810;
+    --text: #c8d6e5;
+    --text-dim: #576574;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* Three.js Canvas */
+#hologram-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+}
+
+/* Scan Line */
+.scan-line {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0.3;
+    animation: scan 5s linear infinite;
+    pointer-events: none;
+    z-index: 100;
+}
+@keyframes scan {
+    0% { top: 0; opacity: 0; }
+    10% { opacity: 0.3; }
+    90% { opacity: 0.3; }
+    100% { top: 100vh; opacity: 0; }
+}
+
+/* Corners */
+.corner {
+    position: fixed;
+    width: 40px; height: 40px;
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    z-index: 100;
+    pointer-events: none;
+}
+.corner-tl { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+.corner-tr { top: 8px; right: 8px; border-left: none; border-bottom: none; }
+.corner-bl { bottom: 8px; left: 8px; border-right: none; border-top: none; }
+.corner-br { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+/* ============================================
+   STATUS BAR - Minimal
+   ============================================ */
+.status-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background: rgba(3, 8, 16, 0.7);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    z-index: 200;
+}
+.status-left, .status-right { display: flex; align-items: center; gap: 8px; }
+.status-center { position: absolute; left: 50%; transform: translateX(-50%); }
+.status-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+.status-text {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+}
+.logo-text {
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 6px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+.status-divider { color: rgba(0, 212, 255, 0.2); }
+
+/* ============================================
+   CHAT OVERLAY - Messages
+   ============================================ */
+.chat-overlay {
+    position: fixed;
+    bottom: 130px; left: 20px; right: 20px;
+    max-height: 40vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 150;
+    pointer-events: none;
+    scrollbar-width: none;
+}
+.chat-overlay::-webkit-scrollbar { display: none; }
+
+.chat-message {
+    max-width: 70%;
+    padding: 8px 14px;
+    border-radius: 4px;
+    animation: msgIn 0.3s ease-out;
+    pointer-events: auto;
+}
+@keyframes msgIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-message.user-msg {
+    align-self: flex-end;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-right: 2px solid var(--cyan);
+}
+.chat-message.jarvis-msg {
+    align-self: flex-start;
+    background: rgba(0, 136, 255, 0.08);
+    border: 1px solid rgba(0, 136, 255, 0.15);
+    border-left: 2px solid var(--blue);
+}
+.chat-message.system-msg {
+    align-self: center;
+    background: rgba(87, 101, 116, 0.1);
+    border: 1px solid rgba(87, 101, 116, 0.15);
+    text-align: center;
+    max-width: 90%;
+}
+
+.msg-sender {
+    display: block;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+.user-msg .msg-sender { color: var(--gold); }
+.jarvis-msg .msg-sender { color: var(--cyan); }
+.system-msg .msg-sender { color: var(--text-dim); }
+
+.msg-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+.msg-time {
+    display: block;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.45rem;
+    color: var(--text-dim);
+    text-align: right;
+    margin-top: 2px;
+}
+
+/* ============================================
+   CAMERA OVERLAY
+   ============================================ */
+.camera-overlay {
+    position: fixed;
+    top: 50px; right: 20px;
+    width: 400px;
+    background: rgba(3, 8, 16, 0.9);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 8px;
+    z-index: 300;
+    animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.camera-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+}
+.camera-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.65rem;
+    color: var(--cyan);
+    letter-spacing: 2px;
+}
+.camera-close {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 4px;
+}
+.camera-close:hover { color: var(--red); }
+.camera-frame {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+}
+.camera-frame iframe {
+    width: 100%; height: 100%;
+    border: none;
+}
+.camera-info {
+    padding: 6px 12px;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.55rem;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* ============================================
+   INPUT AREA - Bottom
+   ============================================ */
+.input-area {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    padding: 10px 20px 14px;
+    background: rgba(3, 8, 16, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 212, 255, 0.1);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    gap: 6px;
+}
+.action-btn {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 212, 255, 0.06);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    color: var(--cyan);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+.action-btn:hover {
+    background: rgba(0, 212, 255, 0.15);
+    border-color: var(--cyan);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    transform: scale(1.1);
+}
+.action-btn:active { transform: scale(0.95); }
+
+/* Mic Button */
+.mic-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.mic-btn {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 212, 255, 0.08);
+    border: 2px solid rgba(0, 212, 255, 0.4);
+    color: var(--cyan);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.mic-btn:hover {
+    background: rgba(0, 212, 255, 0.15);
+    border-color: var(--cyan);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+.mic-btn.listening {
+    background: rgba(255, 51, 51, 0.2);
+    border-color: var(--red);
+    color: var(--red);
+    animation: mic-pulse 1s infinite;
+}
+@keyframes mic-pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 51, 51, 0.3); }
+    50% { box-shadow: 0 0 25px rgba(255, 51, 51, 0.6); }
+}
+.mic-status {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.55rem;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    min-width: 80px;
+}
+
+/* Chat Input */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(0, 212, 255, 0.03);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    border-radius: 6px;
+    padding: 6px 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.input-wrapper:focus-within {
+    border-color: var(--cyan);
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.15);
+}
+.input-prefix {
+    font-family: 'Orbitron', monospace;
+    color: var(--gold);
+    font-size: 0.85rem;
+    margin-right: 10px;
+    opacity: 0.7;
+}
+.chat-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    padding: 4px 0;
+}
+.chat-input::placeholder { color: var(--text-dim); }
+.send-btn {
+    background: transparent;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 4px;
+    padding: 6px 10px;
+    color: var(--cyan);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.send-btn:hover {
+    background: rgba(0, 212, 255, 0.15);
+    border-color: var(--cyan);
+}

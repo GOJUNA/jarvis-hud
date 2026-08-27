@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S. - Hologram Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Three.js Canvas - Hologram Sphere -->
+    <canvas id="hologram-canvas"></canvas>
+
+    <!-- Scan Line -->
+    <div class="scan-line"></div>
+
+    <!-- Minimal Status Bar - oben -->
+    <div class="status-bar">
+        <div class="status-left">
+            <span class="status-dot online"></span>
+            <span class="status-text" id="status-text">SYSTEM ONLINE</span>
+        </div>
+        <div class="status-center">
+            <span class="logo-text">J.A.R.V.I.S.</span>
+        </div>
+        <div class="status-right">
+            <span class="status-text" id="clock">00:00:00</span>
+            <span class="status-divider">|</span>
+            <span class="status-text" id="date">--</span>
+        </div>
+    </div>
+
+    <!-- Chat Messages Overlay -->
+    <div class="chat-overlay" id="chat-overlay">
+        <div class="chat-message system-msg">
+            <span class="msg-sender">SYSTEM</span>
+            <span class="msg-text">J.A.R.V.I.S. initialisiert. Alle Systeme nominal.</span>
+            <span class="msg-time" id="init-time"></span>
+        </div>
+    </div>
+
+    <!-- Camera Feed Overlay -->
+    <div class="camera-overlay" id="camera-overlay" style="display: none;">
+        <div class="camera-header">
+            <span class="camera-title" id="camera-title">KAMERA</span>
+            <button class="camera-close" id="camera-close">&times;</button>
+        </div>
+        <div class="camera-frame" id="camera-frame"></div>
+        <div class="camera-info" id="camera-info"></div>
+    </div>
+
+    <!-- Bottom Input Area -->
+    <div class="input-area">
+        <!-- Quick Action Buttons -->
+        <div class="quick-actions">
+            <button class="action-btn" data-action="hilfe" title="Hilfe">
+                <span>?</span>
+            </button>
+            <button class="action-btn" data-action="welche aufgaben hast du fuer mich" title="Aufgaben">
+                <span>&#9776;</span>
+            </button>
+            <button class="action-btn" data-action="sag mir die uhrzeit" title="Uhrzeit">
+                <span>&#9201;</span>
+            </button>
+            <button class="action-btn" data-action="wie ist das wetter" title="Wetter">
+                <span>&#9729;</span>
+            </button>
+            <button class="action-btn" data-action="suche nach kuenstliche intelligenz" title="Websuche">
+                <span>&#128269;</span>
+            </button>
+            <button class="action-btn" data-action="zeig kamera zurich" title="Kamera">
+                <span>&#127909;</span>
+            </button>
+        </div>
+
+        <!-- Mic Button -->
+        <div class="mic-row">
+            <button id="mic-btn" class="mic-btn" title="Sprachsteuerung (Ctrl+M)">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                    <path fill="currentColor" d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                </svg>
+            </button>
+            <span class="mic-status" id="mic-status">Bereit</span>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="input-wrapper">
+            <span class="input-prefix">&gt;&gt;&gt;</span>
+            <input type="text" id="chat-input" class="chat-input" placeholder="Befehl eingeben oder sprechen..." autocomplete="off" autofocus>
+            <button id="send-btn" class="send-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Corner Decorations -->
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

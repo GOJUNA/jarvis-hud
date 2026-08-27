@@ -1,0 +1,606 @@
+{
+  "conversation_history": [
+    {
+      "role": "user",
+      "text": "zeig kamera tokyo",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783957717.6572316
+    },
+    {
+      "role": "jarvis",
+      "text": "Gefunden: Tokyo - Shibuya in Tokyo. Kamera wird geladen...",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783957717.6596043
+    },
+    {
+      "role": "user",
+      "text": "wo ist die kamera",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783957737.336058
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Kamera fuer 'wo ist die kamera' gefunden. Verfuegbare Staedte: Zurich, London, Paris, New York, Tokyo, Dubai, Rom, Berlin.",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783957737.3381288
+    },
+    {
+      "role": "user",
+      "text": "london",
+      "intent": "UNKNOWN",
+      "timestamp": 1783957747.0571353
+    },
+    {
+      "role": "jarvis",
+      "text": "Das habe ich leider nicht verstanden. Kannst du das bitte anders formulieren?\nTippe 'Hilfe' fuer eine Liste verfuegbarer Befehle.",
+      "intent": "UNKNOWN",
+      "timestamp": 1783957747.0594397
+    },
+    {
+      "role": "user",
+      "text": "Was ist london",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783957761.2905564
+    },
+    {
+      "role": "jarvis",
+      "text": "[Wikipedia] London\nLondon ist zugleich die Hauptstadt des Vereinigten Königreichs und Englands. Die Stadt liegt an der Themse im Südosten Englands. Das heutige Verwaltungsgebiet mit 33 Stadtbezirken entstand 1965 durch die Gründung von Greater London. Dort lebten 2022 rund 8,9 Millionen Menschen, davon rund 3,4 Millionen in den 13 Stadtbezirken Inner Londons. In der gesamten Metropolregion London lebten 2019 knapp 14,4 Millionen Einwohner.\n\n[Wikipedia] London is the capital and largest city of England and the United Kingdom, with a population of 9.1 million people in 2024. Its wider metropolitan area is the largest in Western Europe, with a population of 15.4 million. London stands on the River Thames in southeast England, at the head of a 50-mile tidal estuary down to the North Sea, and has been a major settlement for nearly 2,000 years. Its ancient core and financial centre, the City of London, was founded by the Romans as Londinium and has retained its medieval boundaries. The City of Westminster, to the west of the City of London, has be\nQuelle: https://en.wikipedia.org/wiki/London",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783957763.3637626
+    },
+    {
+      "role": "user",
+      "text": "welche aufgaben hast du fuer mich",
+      "intent": "TASK_LIST",
+      "timestamp": 1783957780.1718009
+    },
+    {
+      "role": "jarvis",
+      "text": "Du hast keine offenen Aufgaben. Gut gemacht!",
+      "intent": "TASK_LIST",
+      "timestamp": 1783957780.1746206
+    },
+    {
+      "role": "user",
+      "text": "zeig kamera zurich",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958293.8597724
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Kamera fuer 'zurich' gefunden. Verfuegbare Staedte: Zurich, London, Paris, New York, Tokyo, Dubai, Rom, Berlin.",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958293.863616
+    },
+    {
+      "role": "user",
+      "text": "zeig kamera london",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958307.924446
+    },
+    {
+      "role": "jarvis",
+      "text": "Gefunden: London - Parliament Square in London. Kamera wird geladen...",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958307.9267592
+    },
+    {
+      "role": "user",
+      "text": "Hallo",
+      "intent": "GREETING",
+      "timestamp": 1783958364.376671
+    },
+    {
+      "role": "jarvis",
+      "text": "Hallo! Wie kann ich dir helfen?",
+      "intent": "GREETING",
+      "timestamp": 1783958364.3791075
+    },
+    {
+      "role": "user",
+      "text": "Verdiene 500 chf ohne meine hilfe",
+      "intent": "HELP",
+      "timestamp": 1783958382.248369
+    },
+    {
+      "role": "jarvis",
+      "text": "J.A.R.V.I.S. - Befehlsuebersicht\n\n  Aufgaben:\n    'Erinnere mich an [Aufgabe]' - Aufgabe hinzufuegen\n    'Welche Aufgaben habe ich?' - Aufgaben auflisten\n    'Loesche Aufgabe [Nummer]' - Aufgabe loeschen\n\n  Notizen:\n    'Notiz: [Text]' - Notiz speichern\n    'Welche Notizen?' - Notizen auflisten\n\n  Erinnerungen:\n    'Erinnere mich [Datum] an [Text]' - Erinnerung setzen\n\n  Websuche:\n    'Suche nach [Thema]' - Internet durchsuchen\n    'Was ist [Begriff]?' - Erklaerung suchen\n\n  Kameras:\n    'Zeig Kamera [Stadt]' - Webcam anzeigen\n    'Welche Kameras?' - Alle Kameras auflisten\n\n  Sonstiges:\n    'Wie spät ist es?' - Uhrzeit\n    'Wie ist das Wetter?' - Wetter\n    'Berechne [Ausdruck]' - Taschenrechner\n    'Timer [Dauer]' - Timer stellen\n    'Mein Name ist [Name]' - Benutzername setzen\n    'Hilfe' - Diese Hilfe\n",
+      "intent": "HELP",
+      "timestamp": 1783958382.250616
+    },
+    {
+      "role": "user",
+      "text": "Verdiene 500 chf ohne meine hilfe",
+      "intent": "HELP",
+      "timestamp": 1783958399.337333
+    },
+    {
+      "role": "jarvis",
+      "text": "J.A.R.V.I.S. - Befehlsuebersicht\n\n  Aufgaben:\n    'Erinnere mich an [Aufgabe]' - Aufgabe hinzufuegen\n    'Welche Aufgaben habe ich?' - Aufgaben auflisten\n    'Loesche Aufgabe [Nummer]' - Aufgabe loeschen\n\n  Notizen:\n    'Notiz: [Text]' - Notiz speichern\n    'Welche Notizen?' - Notizen auflisten\n\n  Erinnerungen:\n    'Erinnere mich [Datum] an [Text]' - Erinnerung setzen\n\n  Websuche:\n    'Suche nach [Thema]' - Internet durchsuchen\n    'Was ist [Begriff]?' - Erklaerung suchen\n\n  Kameras:\n    'Zeig Kamera [Stadt]' - Webcam anzeigen\n    'Welche Kameras?' - Alle Kameras auflisten\n\n  Sonstiges:\n    'Wie spät ist es?' - Uhrzeit\n    'Wie ist das Wetter?' - Wetter\n    'Berechne [Ausdruck]' - Taschenrechner\n    'Timer [Dauer]' - Timer stellen\n    'Mein Name ist [Name]' - Benutzername setzen\n    'Hilfe' - Diese Hilfe\n",
+      "intent": "HELP",
+      "timestamp": 1783958399.340512
+    },
+    {
+      "role": "user",
+      "text": "welche aufgaben hast du fuer mich",
+      "intent": "TASK_LIST",
+      "timestamp": 1783958401.2108448
+    },
+    {
+      "role": "jarvis",
+      "text": "Du hast keine offenen Aufgaben. Gut gemacht!",
+      "intent": "TASK_LIST",
+      "timestamp": 1783958401.2131534
+    },
+    {
+      "role": "user",
+      "text": "sag mir die uhrzeit",
+      "intent": "TIME",
+      "timestamp": 1783958404.1371558
+    },
+    {
+      "role": "jarvis",
+      "text": "Es ist 18:00 Uhr.",
+      "intent": "TIME",
+      "timestamp": 1783958404.139483
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958408.014731
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958411.231456
+    },
+    {
+      "role": "jarvis",
+      "text": "[Websuche]\n- MAS Künstliche Intelligenz - Ostschweizer Fachhochschule\n  Vertiefe dein Wissen rund um Artificial Intelligence. Mit einer Weiterbildung an der OST. Immer weiter mit einer Weiterbildung an der OST: Entdecke den MAS Artificial Intelligence\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                  \n                     \n                      \n                        \n                          Pega Künstliche Intelligenz - KI strategisch nutzen\n                        \n                        \n                          Ad\n                          \n                            \n                              \n                              \n                              Viewing ads is privacy protected by DuckDuckGo. Ad clicks are managed by Microsoft's ad network (more info).\n                            \n                          \n                        \n                      \n\n                      \n                        \n                          pega.com\n                        \n                      \n\n                      \n\n                      \n                        Setzen Sie mit leistungsstarker KI neue Konzepte um und steigern Sie die Produktivität. Entfesseln Sie Intelligenz für grenzenlose Ergebnisse mit Unternehmens-KI.\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Künstliche Intelligenz - Wikipedia\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Dost.ch%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DGfmWRscVjdMnLFzuCgY1g%252D9NAW0n_s%252Dw9nMCwaf1ZnzYplWKzRYF7OrtrmjSpkkgV6cv3MvK676IX2fXOJgG9%252D9uXn7a0r2Sf%252DXiwT8IphG4UmHk_vpjq7bT_TlYMCGXJMoBAE1A1I29d%252Dvj8sgqEsl9x50LhQNms3hVhcYphBw.bkonQdjUklGfeLIx1EajYQ%26rut%3Dee3dde876632cfb86e2fc1ae0b7faa14d44afe90fed7fa5a9be2803ddf381341%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De88CTIYoiyw7hCSDY1rNhLXDVUCUzNeo5TBNHHzk7M_PfnOqYbzAN2KhsYcZfnhiMTuZmnNYWJfH5s9pc0kd_dXNjBhT9mzZTyxbOmzc4hTWxgyhqSkoVDf%252Dsl6kpB9gSXamfX6j04AuEiKom9JVJE2EOlTEYXJ4iefk1yB3480bniTzpUiPtRTtIOM2Dxd41suW6TW_db6Xm4yQE6k%252Di3sEWyxPU%2526u%253DaHR0cHMlM2ElMmYlMmZ3d3cub3N0LmNoJTJmZGUlMmZ3ZWl0ZXJiaWxkdW5nJTJmd2VpdGVyYmlsZHVuZ3NhbmdlYm90JTJma3VlbnN0bGljaGUtaW50ZWxsaWdlbnolMmZtYXMtYXJ0aWZpY2lhbC1pbnRlbGxpZ2VuY2UlM2Ztc2Nsa2lkJTNkMzIzYjVkOGMwZDdhMTEyZGIwZjUzN2Q5MDZmMDE1ZWUlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2QoYnNhLWNoLWRlX2QpJTI1M0ElMjUyMCUyNTVCd2Ita2ktYXJ0aWZpY2lhbCUyNTIwaW50ZWxsaWdlbmNlX3Byb2R1a3RlXzIwMjYlMjU1RCUyNnV0bV90ZXJtJTNkbWFzJTI1MjBrJWMzJWJjbnN0bGljaGUlMjUyMGludGVsbGlnZW56JTI2dXRtX2NvbnRlbnQlM2QlMjU1Qm1hc19hcnRpZmljaWFsX2ludGVsbGlnZW5jZSUyNTVEJTI1M0ElMjUyMCUyNTdCLWdfY2gtbF9kZS1jX3R4dC10X3BocmFzZS1zX0JpbmdTZWFyY2glMjU3RA%2526rlid%253D323b5d8c0d7a112db0f537d906f015ee%26vqd%3D4%2D51794452505221057210110750993201343159%26iurl%3D%257B1%257DIG%253D25BEB9DF875745B2A5831002536A72FE%2526CID%253D27AAC3A3A0DB677B3FABD436A14B6690%2526ID%253DDevEx%252C5039.1&amp;rut=8928185344d828472e5e33c42d7e510863c9537fb891b08f5bf626c95fd62578\n- Künstliche Intelligenz - bakom.admin.ch\n  Künstliche Intelligenz (KI) hat sich in den letzten Jahren rasant entwickelt. Spätestens seit der Lancierung generativer KI-Anwendungen wie ChatGPT ist das Thema KI auch in der breiten Öffentlichkeit angekommen. Für den Wirtschafts- und Innovationsstandort Schweiz bietet KI grosse Chancen.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Künstliche Intelligenz: News und Hintergründe zu KI - Wissen - SRF\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bakom.admin.ch%2Fde%2Fkuenstliche%2Dintelligenz&amp;rut=c24438b42f17e012fdbd1ddcdb4433ae45d91510b0731e8ee7b2c77fb46c613d\n- Was ist künstliche Intelligenz? • einfach erklärt · [mit Video]\n  Lerne, was künstliche Intelligenz (KI) ist, wie sie funktioniert und welche Anwendungen und Zukunft sie hat. Erfahre mehr über Expertensysteme, maschinelles Lernen, neuronale Netze und künstliche Intelligenz in der Medizin.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Was ist künstliche Intelligenz und wie wird sie genutzt?\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fstudyflix.de%2Finformatik%2Fwas%2Dist%2Dkuenstliche%2Dintelligenz%2D6919&amp;rut=ca67880da4c0c4f0b49092d1b57962aa4442a7eb7ab48edca7ac783926e0dd22",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958411.3394225
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958412.586778
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958413.3469162
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958413.7692907
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958414.0807936
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958414.349315
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958414.5461419
+    },
+    {
+      "role": "jarvis",
+      "text": "[Websuche]\n- MAS Künstliche Intelligenz - Ostschweizer Fachhochschule\n  Vertiefe dein Wissen rund um Artificial Intelligence. Mit einer Weiterbildung an der OST. Immer weiter mit einer Weiterbildung an der OST: Entdecke den MAS Artificial Intelligence\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                  \n                     \n                      \n                        \n                          Study AI in Business Online - Explore AI Over 6 Weeks Online\n                        \n                        \n                          Ad\n                          \n                            \n                              \n                              \n                              Viewing ads is privacy protected by DuckDuckGo. Ad clicks are managed by Microsoft's ad network (more info).\n                            \n                          \n                        \n                      \n\n                      \n                        \n                          getsmarter.com\n                        \n                      \n\n                      \n\n                      \n                        &quot;Move beyond pilots and start building AI-powered workflows, systems, and strategies.&quot;. &quot;An AI course that&#x27;s centered on business, not code. 6 weeks, 100% online with LSE.&quot;\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Künstliche Intelligenz - Wikipedia\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Dost.ch%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DciVGJac4%252DaBdzCkcxc4WXcyZ7ckg4odezAahFbV2%252DgtWXLxVap9JZ1vFA2BLo2oviArMod3NPFqUi%252D9LYGDvRYNS0Que__HucB2VWMM%252DzpqVD9yDZYIJtNISdcF8lUZSRH7FbsnxRv_JnhHRGTR2vgpJQrhdqJW5f4RDeBRt2MI.Dx7HhWArU7ihVg4vgWl1uA%26rut%3D4983cc66578ad1c6a8bb014082d276e1823165cf3267045d22b778734c750916%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8ApDNDAXzEWYeDnIzGdN5zTVUCUzbbdsXBfTv5xaTPD8P8uj4jkahf8jX3I6P8N2dE3U%252Dp5fI6LQRenYA4j5Qz0denHO69rvR7zDIGkHcnt8uMKyNuOnwht8_m3sXZ3DRAruQmEafLpDsOVsRMd3NcHJtVW9jy6XqQp8qUKUC2bkGBs3TAULIU5a8UByasbjyL1x7iv1aFXkpqisDAn3H8THF0c0%2526u%253DaHR0cHMlM2ElMmYlMmZ3d3cub3N0LmNoJTJmZGUlMmZ3ZWl0ZXJiaWxkdW5nJTJmd2VpdGVyYmlsZHVuZ3NhbmdlYm90JTJma3VlbnN0bGljaGUtaW50ZWxsaWdlbnolMmZtYXMtYXJ0aWZpY2lhbC1pbnRlbGxpZ2VuY2UlM2Ztc2Nsa2lkJTNkZTFmYWZlMjlhOWY4MTBlYTQyODg5NDdjYTI3NjEyZTYlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2QoYnNhLWNoLWRlX2QpJTI1M0ElMjUyMCUyNTVCd2Ita2ktYXJ0aWZpY2lhbCUyNTIwaW50ZWxsaWdlbmNlX3Byb2R1a3RlXzIwMjYlMjU1RCUyNnV0bV90ZXJtJTNkbWFzJTI1MjBrJWMzJWJjbnN0bGljaGUlMjUyMGludGVsbGlnZW56JTI2dXRtX2NvbnRlbnQlM2QlMjU1Qm1hc19hcnRpZmljaWFsX2ludGVsbGlnZW5jZSUyNTVEJTI1M0ElMjUyMCUyNTdCLWdfY2gtbF9kZS1jX3R4dC10X3BocmFzZS1zX0JpbmdTZWFyY2glMjU3RA%2526rlid%253De1fafe29a9f810ea4288947ca27612e6%26vqd%3D4%2D296703941780546590613314678684910061646%26iurl%3D%257B1%257DIG%253D92432A79758046A995A0FBFD0C1220EE%2526CID%253D2725F6A921386D2A3FA6E13C20A86C9E%2526ID%253DDevEx%252C5039.1&amp;rut=f9f0e80efe0e91552cafe5ce97c7f66e75a44186fc34ac132c17b1a5959f7e33\n- Künstliche Intelligenz - bakom.admin.ch\n  Künstliche Intelligenz (KI) hat sich in den letzten Jahren rasant entwickelt. Spätestens seit der Lancierung generativer KI-Anwendungen wie ChatGPT ist das Thema KI auch in der breiten Öffentlichkeit angekommen.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Künstliche Intelligenz: News und Hintergründe zu KI - Wissen - SRF\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bakom.admin.ch%2Fde%2Fkuenstliche%2Dintelligenz&amp;rut=c24438b42f17e012fdbd1ddcdb4433ae45d91510b0731e8ee7b2c77fb46c613d\n- Was ist künstliche Intelligenz? • einfach erklärt · [mit Video]\n  Lerne, was künstliche Intelligenz (KI) ist, wie sie funktioniert und welche Anwendungen und Zukunft sie hat. Erfahre mehr über Expertensysteme, maschinelles Lernen, neuronale Netze und künstliche Intelligenz in der Medizin.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Was ist KI und welche Formen von KI gibt es?\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fstudyflix.de%2Finformatik%2Fwas%2Dist%2Dkuenstliche%2Dintelligenz%2D6919&amp;rut=ca67880da4c0c4f0b49092d1b57962aa4442a7eb7ab48edca7ac783926e0dd22",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958414.6895397
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958414.7440522
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958414.9290988
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958415.1500561
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958415.3615437
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958415.5510817
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958415.757438
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958415.9798174
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958416.1703775
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958416.3666885
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958416.5410576
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958416.7889736
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958416.9321656
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958417.225937
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958417.339489
+    },
+    {
+      "role": "user",
+      "text": "hilfe",
+      "intent": "HELP",
+      "timestamp": 1783958417.933268
+    },
+    {
+      "role": "jarvis",
+      "text": "J.A.R.V.I.S. - Befehlsuebersicht\n\n  Aufgaben:\n    'Erinnere mich an [Aufgabe]' - Aufgabe hinzufuegen\n    'Welche Aufgaben habe ich?' - Aufgaben auflisten\n    'Loesche Aufgabe [Nummer]' - Aufgabe loeschen\n\n  Notizen:\n    'Notiz: [Text]' - Notiz speichern\n    'Welche Notizen?' - Notizen auflisten\n\n  Erinnerungen:\n    'Erinnere mich [Datum] an [Text]' - Erinnerung setzen\n\n  Websuche:\n    'Suche nach [Thema]' - Internet durchsuchen\n    'Was ist [Begriff]?' - Erklaerung suchen\n\n  Kameras:\n    'Zeig Kamera [Stadt]' - Webcam anzeigen\n    'Welche Kameras?' - Alle Kameras auflisten\n\n  Sonstiges:\n    'Wie spät ist es?' - Uhrzeit\n    'Wie ist das Wetter?' - Wetter\n    'Berechne [Ausdruck]' - Taschenrechner\n    'Timer [Dauer]' - Timer stellen\n    'Mein Name ist [Name]' - Benutzername setzen\n    'Hilfe' - Diese Hilfe\n",
+      "intent": "HELP",
+      "timestamp": 1783958417.9374623
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958418.2278957
+    },
+    {
+      "role": "user",
+      "text": "welche aufgaben hast du fuer mich",
+      "intent": "TASK_LIST",
+      "timestamp": 1783958418.4393666
+    },
+    {
+      "role": "jarvis",
+      "text": "Du hast keine offenen Aufgaben. Gut gemacht!",
+      "intent": "TASK_LIST",
+      "timestamp": 1783958418.444295
+    },
+    {
+      "role": "user",
+      "text": "hilfe",
+      "intent": "HELP",
+      "timestamp": 1783958419.1875412
+    },
+    {
+      "role": "jarvis",
+      "text": "J.A.R.V.I.S. - Befehlsuebersicht\n\n  Aufgaben:\n    'Erinnere mich an [Aufgabe]' - Aufgabe hinzufuegen\n    'Welche Aufgaben habe ich?' - Aufgaben auflisten\n    'Loesche Aufgabe [Nummer]' - Aufgabe loeschen\n\n  Notizen:\n    'Notiz: [Text]' - Notiz speichern\n    'Welche Notizen?' - Notizen auflisten\n\n  Erinnerungen:\n    'Erinnere mich [Datum] an [Text]' - Erinnerung setzen\n\n  Websuche:\n    'Suche nach [Thema]' - Internet durchsuchen\n    'Was ist [Begriff]?' - Erklaerung suchen\n\n  Kameras:\n    'Zeig Kamera [Stadt]' - Webcam anzeigen\n    'Welche Kameras?' - Alle Kameras auflisten\n\n  Sonstiges:\n    'Wie spät ist es?' - Uhrzeit\n    'Wie ist das Wetter?' - Wetter\n    'Berechne [Ausdruck]' - Taschenrechner\n    'Timer [Dauer]' - Timer stellen\n    'Mein Name ist [Name]' - Benutzername setzen\n    'Hilfe' - Diese Hilfe\n",
+      "intent": "HELP",
+      "timestamp": 1783958419.1922276
+    },
+    {
+      "role": "user",
+      "text": "welche aufgaben hast du fuer mich",
+      "intent": "TASK_LIST",
+      "timestamp": 1783958419.550036
+    },
+    {
+      "role": "jarvis",
+      "text": "Du hast keine offenen Aufgaben. Gut gemacht!",
+      "intent": "TASK_LIST",
+      "timestamp": 1783958419.555705
+    },
+    {
+      "role": "user",
+      "text": "hilfe",
+      "intent": "HELP",
+      "timestamp": 1783958419.9540393
+    },
+    {
+      "role": "jarvis",
+      "text": "J.A.R.V.I.S. - Befehlsuebersicht\n\n  Aufgaben:\n    'Erinnere mich an [Aufgabe]' - Aufgabe hinzufuegen\n    'Welche Aufgaben habe ich?' - Aufgaben auflisten\n    'Loesche Aufgabe [Nummer]' - Aufgabe loeschen\n\n  Notizen:\n    'Notiz: [Text]' - Notiz speichern\n    'Welche Notizen?' - Notizen auflisten\n\n  Erinnerungen:\n    'Erinnere mich [Datum] an [Text]' - Erinnerung setzen\n\n  Websuche:\n    'Suche nach [Thema]' - Internet durchsuchen\n    'Was ist [Begriff]?' - Erklaerung suchen\n\n  Kameras:\n    'Zeig Kamera [Stadt]' - Webcam anzeigen\n    'Welche Kameras?' - Alle Kameras auflisten\n\n  Sonstiges:\n    'Wie spät ist es?' - Uhrzeit\n    'Wie ist das Wetter?' - Wetter\n    'Berechne [Ausdruck]' - Taschenrechner\n    'Timer [Dauer]' - Timer stellen\n    'Mein Name ist [Name]' - Benutzername setzen\n    'Hilfe' - Diese Hilfe\n",
+      "intent": "HELP",
+      "timestamp": 1783958419.9580455
+    },
+    {
+      "role": "jarvis",
+      "text": "[Websuche]\n- MAS Künstliche Intelligenz - Ostschweizer Fachhochschule\n  Vertiefe dein Wissen rund um Artificial Intelligence. Mit einer Weiterbildung an der OST. Immer weiter mit einer Weiterbildung an der OST: Entdecke den MAS Artificial Intelligence\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                  \n                     \n                      \n                        \n                          AI Implementation Course - Registration Closes Soon\n                        \n                        \n                          Ad\n                          \n                            \n                              \n                              \n                              Viewing ads is privacy protected by DuckDuckGo. Ad clicks are managed by Microsoft's ad network (more info).\n                            \n                          \n                        \n                      \n\n                      \n                        \n                          getsmarter.com\n                        \n                      \n\n                      \n\n                      \n                        &quot;Move beyond pilots and start building AI-powered workflows, systems, and strategies.&quot;. No coding. Just the practical frameworks to lead AI implementation in your organisation.\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Künstliche Intelligenz - Wikipedia\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Dost.ch%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3Drfm9ncg6pWT4_tib9Sf1Yj0kReOSDoSsi_CpnmUfqRuFhr1hcWTZWxqSDWJpYuNCm4IF96Igpff9YZX4grwOsjKL7I_VgP3DT17c_EPo4uwdI9WWLET9xNKuNel1jicgnpBG93jZI%252D4XtNpdJgdQz4U3XA3UQYwG90tKX_esbqU.syBE2J1IFl9_SUuDu_26zw%26rut%3D5ed720131d656840ec0493c2cdc40b518ef49e31285d2e60e88f05f66212aa74%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8U8E%252DBiQnicd5bb2M7HPG8jVUCUwFAXYVvEW1vkJjThVRTsa9EtKuWoCoP0RZeEuI8F5oEF7TmP5LeAiWW4txeQbYq3ZbbCE6i6p%252DNKBI1iWY%252DsP9KgHTbGczRtI7EeHfVjg8DlWPtLA4Ubd9DjqmQIHRnGJnB8BZXioi37lck%252D3ZnPr4f9SA5v0oOfP3iQAjRcWQphKxEfIyH5jd5J81IvsBYvw%2526u%253DaHR0cHMlM2ElMmYlMmZ3d3cub3N0LmNoJTJmZGUlMmZ3ZWl0ZXJiaWxkdW5nJTJmd2VpdGVyYmlsZHVuZ3NhbmdlYm90JTJma3VlbnN0bGljaGUtaW50ZWxsaWdlbnolMmZtYXMtYXJ0aWZpY2lhbC1pbnRlbGxpZ2VuY2UlM2Ztc2Nsa2lkJTNkNjdjNWFlMjI0ZDY5MTI2MGU5MGNjNDc3NDZmYTA2OGMlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2QoYnNhLWNoLWRlX2QpJTI1M0ElMjUyMCUyNTVCd2Ita2ktYXJ0aWZpY2lhbCUyNTIwaW50ZWxsaWdlbmNlX3Byb2R1a3RlXzIwMjYlMjU1RCUyNnV0bV90ZXJtJTNkbWFzJTI1MjBrJWMzJWJjbnN0bGljaGUlMjUyMGludGVsbGlnZW56JTI2dXRtX2NvbnRlbnQlM2QlMjU1Qm1hc19hcnRpZmljaWFsX2ludGVsbGlnZW5jZSUyNTVEJTI1M0ElMjUyMCUyNTdCLWdfY2gtbF9kZS1jX3R4dC10X3BocmFzZS1zX0JpbmdTZWFyY2glMjU3RA%2526rlid%253D67c5ae224d691260e90cc47746fa068c%26vqd%3D4%2D54068117360952107596356662228741702567%26iurl%3D%257B1%257DIG%253D044511DFACC942AE92773D34A30620AD%2526CID%253D1C430EA1D707670408991934D6EF66DF%2526ID%253DDevEx%252C5039.1&amp;rut=eeb82460d316c1933b32092d426691d27fab8233819f66f8e3f2ef8328392957\n- Künstliche Intelligenz - bakom.admin.ch\n  Künstliche Intelligenz (KI) hat sich in den letzten Jahren rasant entwickelt. Spätestens seit der Lancierung generativer KI-Anwendungen wie ChatGPT ist das Thema KI auch in der breiten Öffentlichkeit angekommen. Für den Wirtschafts- und Innovationsstandort Schweiz bietet KI grosse Chancen.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Künstliche Intelligenz: News und Hintergründe zu KI - Wissen - SRF\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bakom.admin.ch%2Fde%2Fkuenstliche%2Dintelligenz&amp;rut=c24438b42f17e012fdbd1ddcdb4433ae45d91510b0731e8ee7b2c77fb46c613d\n- Was ist künstliche Intelligenz? • einfach erklärt · [mit Video]\n  Lerne, was künstliche Intelligenz (KI) ist, wie sie funktioniert und welche Anwendungen und Zukunft sie hat. Erfahre mehr über Expertensysteme, maschinelles Lernen, neuronale Netze und künstliche Intelligenz in der Medizin.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Was ist künstliche Intelligenz und wie wird sie genutzt?\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fstudyflix.de%2Finformatik%2Fwas%2Dist%2Dkuenstliche%2Dintelligenz%2D6919&amp;rut=ca67880da4c0c4f0b49092d1b57962aa4442a7eb7ab48edca7ac783926e0dd22",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958419.969855
+    },
+    {
+      "role": "user",
+      "text": "sag mir die uhrzeit",
+      "intent": "TIME",
+      "timestamp": 1783958420.5750437
+    },
+    {
+      "role": "jarvis",
+      "text": "Es ist 18:00 Uhr.",
+      "intent": "TIME",
+      "timestamp": 1783958420.579259
+    },
+    {
+      "role": "user",
+      "text": "sag mir die uhrzeit",
+      "intent": "TIME",
+      "timestamp": 1783958420.750098
+    },
+    {
+      "role": "jarvis",
+      "text": "[Websuche]\n- MAS Künstliche Intelligenz - Ostschweizer Fachhochschule\n  Vertiefe dein Wissen rund um Artificial Intelligence. Mit einer Weiterbildung an der OST. Immer weiter mit einer Weiterbildung an der OST: Entdecke den MAS Artificial Intelligence\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                  \n                     \n                      \n                        \n                          Künstliche Intelligenz - Pega Künstliche Intelligenz\n                        \n                        \n                          Ad\n                          \n                            \n                              \n                              \n                              Viewing ads is privacy protected by DuckDuckGo. Ad clicks are managed by Microsoft's ad network (more info).\n                            \n                          \n                        \n                      \n\n                      \n                        \n                          pega.com\n                        \n                      \n\n                      \n\n                      \n                        Setzen Sie mit leistungsstarker KI neue Konzepte um und steigern Sie die Produktivität. Entdecken Sie die leistungsstarken Anwendungen und beispiellosen Möglichkeiten der KI.\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Künstliche Intelligenz - Wikipedia\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Dost.ch%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DHUEHVZ8_tHIzS5ERvUTjMxVXsxB4mNeseLAKzX_09PhKXI8AlJS%252DftRdswBdhPkVWFyTsyEBL8PPrLvLMLxt_gESLm7VsTSe0Mg_KAAY4%252DP8iyhPAisZn70AYwdNtccA_o%252DkRLeUBp%252DAfzZdsm2VP2wE%252DlniRmSRxi9IE8j2pQ8.QszGgHiQmsoBv7o3H%252DspBg%26rut%3Df4f0489826b8d8e7e5b2694e0e1b21a48d87326bbb09e76e0b93c97f4824888a%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8AuTUg53xJUDKs_dwMkxUqzVUCUwFw%252DNbjSzp__0z5N46Nq2x3syZ%252D1TqeubJ0xSp7DL5RPVPSf0i9vZIF%252DLPtx4mbcKuQtv2cCKtEphltv4I8vUNPVfjaTCs%252DXhkp44n9mK7cJeLxd52qVYr%252Dv0geWgqyEfm45I_exNp8viAUGtAPT7hNIBI4FB%252DLGhiuVA7xLgg12P2akVXGtVIOk1qBI2O_FU%2526u%253DaHR0cHMlM2ElMmYlMmZ3d3cub3N0LmNoJTJmZGUlMmZ3ZWl0ZXJiaWxkdW5nJTJmd2VpdGVyYmlsZHVuZ3NhbmdlYm90JTJma3VlbnN0bGljaGUtaW50ZWxsaWdlbnolMmZtYXMtYXJ0aWZpY2lhbC1pbnRlbGxpZ2VuY2UlM2Ztc2Nsa2lkJTNkNGIyNzhkNWE0ZTA5MTU1NGNhNzNlNzBmNDU5ZGRkNDAlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2QoYnNhLWNoLWRlX2QpJTI1M0ElMjUyMCUyNTVCd2Ita2ktYXJ0aWZpY2lhbCUyNTIwaW50ZWxsaWdlbmNlX3Byb2R1a3RlXzIwMjYlMjU1RCUyNnV0bV90ZXJtJTNkbWFzJTI1MjBrJWMzJWJjbnN0bGljaGUlMjUyMGludGVsbGlnZW56JTI2dXRtX2NvbnRlbnQlM2QlMjU1Qm1hc19hcnRpZmljaWFsX2ludGVsbGlnZW5jZSUyNTVEJTI1M0ElMjUyMCUyNTdCLWdfY2gtbF9kZS1jX3R4dC10X3BocmFzZS1zX0JpbmdTZWFyY2glMjU3RA%2526rlid%253D4b278d5a4e091554ca73e70f459ddd40%26vqd%3D4%2D245098750355948725093594475549235625071%26iurl%3D%257B1%257DIG%253DCA30282427364FCF8FAD13A5A97C1719%2526CID%253D0F1E62180EA26B1C21FF758D0F4A6A9F%2526ID%253DDevEx%252C5039.1&amp;rut=647eefa006f23e5694f54d929e352564d39cff5e094ee071d3955773781a9263\n- Künstliche Intelligenz - bakom.admin.ch\n  Künstliche Intelligenz (KI) hat sich in den letzten Jahren rasant entwickelt. Spätestens seit der Lancierung generativer KI-Anwendungen wie ChatGPT ist das Thema KI auch in der breiten Öffentlichkeit angekommen. Für den Wirtschafts- und Innovationsstandort Schweiz bietet KI grosse Chancen.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Künstliche Intelligenz: News und Hintergründe zu KI - Wissen - SRF\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bakom.admin.ch%2Fde%2Fkuenstliche%2Dintelligenz&amp;rut=c24438b42f17e012fdbd1ddcdb4433ae45d91510b0731e8ee7b2c77fb46c613d\n- Was ist künstliche Intelligenz und wie wird sie genutzt?\n  Was ist künstliche Intelligenz? Künstliche Intelligenz ist die Fähigkeit einer Maschine, menschliche Fähigkeiten wie logisches Denken, Lernen, Planen und Kreativität zu imitieren.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Was ist künstliche Intelligenz? • einfach erklärt · [mit Video]\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.europarl.europa.eu%2Ftopics%2Fde%2Farticle%2F20200827STO85804%2Fwas%2Dist%2Dkunstliche%2Dintelligenz%2Dund%2Dwie%2Dwird%2Dsie%2Dgenutzt&amp;rut=f1c71c8bd4fd4259600bd754ffcdebd7b90047ca9feac948ccee40d9c1f92f97",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958420.758313
+    },
+    {
+      "role": "jarvis",
+      "text": "Es ist 18:00 Uhr.",
+      "intent": "TIME",
+      "timestamp": 1783958420.75852
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958420.7862842
+    },
+    {
+      "role": "user",
+      "text": "wie ist das wetter",
+      "intent": "WEATHER",
+      "timestamp": 1783958420.9292464
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958420.9381273
+    },
+    {
+      "role": "user",
+      "text": "suche nach kuenstliche intelligenz",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958421.121809
+    },
+    {
+      "role": "user",
+      "text": "zeig kamera zurich",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958421.2771237
+    },
+    {
+      "role": "jarvis",
+      "text": "Gefunden: Zuerich HB in Zuerich. Kamera wird geladen...",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958421.28118
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958421.5359485
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958421.964357
+    },
+    {
+      "role": "user",
+      "text": "zeig kamera zurich",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958422.030457
+    },
+    {
+      "role": "jarvis",
+      "text": "Gefunden: Zuerich HB in Zuerich. Kamera wird geladen...",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958422.0345402
+    },
+    {
+      "role": "user",
+      "text": "zeig kamera zurich",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958422.2224188
+    },
+    {
+      "role": "jarvis",
+      "text": "Gefunden: Zuerich HB in Zuerich. Kamera wird geladen...",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958422.2270927
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958422.6166844
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958423.2256374
+    },
+    {
+      "role": "jarvis",
+      "text": "Wetter in Amriswil:\n  Temperatur: 31.9 C (gefuehlt 31.4 C)\n  Beschreibung: Bedeckt\n  Luftfeuchtigkeit: 35%\n  Wind: 2.42 m/s",
+      "intent": "WEATHER",
+      "timestamp": 1783958423.8739617
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958424.0050504
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958424.046818
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958424.4028592
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958425.0329773
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958425.1700883
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958425.2700245
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958425.282859
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958425.2843869
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958425.290532
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958425.4211063
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958425.437486
+    },
+    {
+      "role": "jarvis",
+      "text": "Keine Ergebnisse fuer 'kuenstliche intelligenz' gefunden.",
+      "intent": "WEB_SEARCH",
+      "timestamp": 1783958425.5191567
+    },
+    {
+      "role": "user",
+      "text": "zeig kamera zurich",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958429.5372863
+    },
+    {
+      "role": "jarvis",
+      "text": "Gefunden: Zuerich HB in Zuerich. Kamera wird geladen...",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958429.540221
+    },
+    {
+      "role": "user",
+      "text": "zeig kamera tokyo",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958453.714802
+    },
+    {
+      "role": "jarvis",
+      "text": "Gefunden: Tokyo - Shibuya in Tokyo. Kamera wird geladen...",
+      "intent": "CAMERA_SHOW",
+      "timestamp": 1783958453.717962
+    },
+    {
+      "role": "user",
+      "text": "Verdiene 500 CHF",
+      "intent": "EARN_MONEY",
+      "timestamp": 1783960844.6303809
+    },
+    {
+      "role": "jarvis",
+      "text": "[Websuche]\n- Sofort online Geld verdienen - Verdiene bis zu €100/Test\n  Melde dich an, um bezahlter Online-Tester zu werden: Bis zu €1.370/Monat von zu Hause aus. Entdecke eine unendliche Vielfalt an Umfragen und Spielen - Grenzenloser Verdient.\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                  \n                     \n                      \n                        \n                          Umfragen Geld Verdienen Schweiz - 15 € pro Umfrage verdienen\n                        \n                        \n                          Ad\n                          \n                            \n                              \n                              \n                              Viewing ads is privacy protected by DuckDuckGo. Ad clicks are managed by Microsoft's ad network (more info).\n                            \n                          \n                        \n                      \n\n                      \n                        \n                          bezahlteumfragen.ch\n                        \n                      \n\n                      \n\n                      \n                        Beantworten Sie Umfragen, um Geld zu verdienen. Wir suchen Mitglieder in Ihrer Nähe. 300 € monatlich online verdienen - einfach &amp; flexibel! Mitglieder aus Ihre Stadt gesucht.\n                      \n\n                      \n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Online Geld Verdienen Schweiz: 21 Methoden für 2026\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Dfreecash.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DiOC_Tri4au42CfMzjiZCmjauWKnJCTW4bGrFItdXs1pmQhMtFJIgoYp6HPfuMNrCiNGUsvs9HvUIF4iYW4ItWwuRJLMGV7Hkjn6a9hRxgnP9Ackb95HjQoVkhc5Y7aTHByrHTNvKG6yRB%252DO%252DeO9BmPhepeglg2ZrDz%252D70UG8eNc.a%252DCaOpF%252DjvBfZz%252Dt9QzKeg%26rut%3Db66fa53b6381de1945ceecdfeafa7775915c7ee0f9630111eb87b7f3d9c3a3f5%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8u0kV9dHUQTeUofxm3vCVQjVUCUx6FBm1AMSdBJQZgZAKJNl9iJYxjySsETdekwNteibOtpAaiiFHXmM7S2cu6HfOKn6jOWIsFGJP5Ew87dzakdBRCmxv_LFo6CSTYQaPkRvuugBGN8m5cvNcFPITj2YqdKW%252DuIR90O9pPoFNZXiwz_y0wAkx795e5k5BUFKuwsfEggBDB2f38acHbxCcu%252Di_bgg%2526u%253DaHR0cHMlM2ElMmYlMmZmcmVlY2FzaC5jb20lMmYlM2Z1dG1fc291cmNlJTNkbWljcm9zb2Z0JTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZDQ4NzMyNDEwNiUyNmFkX2dyb3VwJTNkMTIzMjU1Mzg1NDY4NzE1OSUyNnV0bV9jb250ZW50JTNka3dkLTc3MDM1MDY0NDIyNjc0JTNhbG9jLTE3NSUyNmNyZWF0aXZlJTNkJTI2dXRtX3Rlcm0lM2RzY2huZWxsJTI1MjBnZWxkJTI1MjB2ZXJkaWVuZW4lMjZzdWIxJTNkcCUyNnN1YjIlM2RzJTI2bXNjbGtpZCUzZDFiNjIwZDZkNmFkMzFiNDc5YmFlNjczODdmZGMxZjhl%2526rlid%253D1b620d6d6ad31b479bae67387fdc1f8e%26vqd%3D4%2D89524155977441480306588670255039932874%26iurl%3D%257B1%257DIG%253DE32077FA7FB64425B48956E12ADF93BF%2526CID%253D1B1048A089F66B9E28605F35881E6A4A%2526ID%253DDevEx%252C5038.1&amp;rut=1fbfa35f99ea984d8b6ed7fc47b3d5501c35f32b9b4e026c82a9c3b9187c5095\n- Online Geld verdienen in der Schweiz: Der realistische Leitfaden (2026)\n  Key Takeaways Freelancing ist der einzige Weg, in der Schweiz zuverlässig mehr als CHF 500/Monat online zu verdienen - Umfragen und passive-Einkommens-Optionen liegen bei CHF 20-100/Monat. Du brauchst keine Einzelfirma, um loszulegen. Du kannst direkt Rechnungen stellen, solange du die Einnahmen in der Steuererklärung angibst.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Online Geld verdienen Schweiz - legal und einfach 2025\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fmagicheidi.ch%2Fde%2Fonline%2Dgeld%2Dverdienen%2Dschweiz&amp;rut=4665d7e43b16538c9f6978c1ec2ddf506adcb06efadb8db0a7aef19425c0d703\n- Online Geld verdienen Schweiz: Der ultimative Leitfaden 2026\n  Online Geld verdienen Schweiz: Der große Guide 2026. 🇨🇭 Erfahre alles über Steuern, Plattformen wie Ricardo und seriöse Wege für Eidgenossen.\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        Seriös Geld nebenbei verdienen Schweiz: 5-Schritte Plan\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fsmartewelle.com%2Fgeld%2Dnebenbei%2Dverdienen%2Donline%2Fonline%2Dgeld%2Dverdienen%2Dschweiz%2F&amp;rut=67396291a5f68a4629e1f9c55d81e2df8a3f79dc7b8bdb907624f23357670da4\n- +50 Tipps: Online Geld verdienen schweizweit 2026 - Schwiizerfranke\n  Mit +50 Tipps wird online Geld verdienen schweizweit einfach umsetzbar. Geld verdienen im Internet oder mit einer einfachen Geschäftsidee starten!\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        74 Wege, 2026 zusätzlich Geld zu verdienen - nadjahorlacher.ch\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.schwiizerfranke.com%2Fonline%2Dgeld%2Dverdienen%2Dschweiz&amp;rut=955fa0f79d3d4df6afa4cf50f85f1bb28561da367c063eaf458698d166aa4f06\n- +50 tips: Earn money online throughout Switzerland in 2026\n  With +50 tips, earning money online Switzerland-wide becomes easy to implement. Earn money on the Internet or start with a simple business idea!\n                      \n                    \n\n                    \n                  \n                \n              \n            \n              \n                \n                   \n                    \n                      \n                        How to Make Money Online in Switzerland: The Realistic Guide (2026)\n  //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.schwiizerfranke.com%2Fen%2Fonline%2Dgeld%2Dverdienen%2Dschweiz&amp;rut=85fb0c4e9d1fe768fc5a05fb3716d9f9b73beabc816b3f5ea2cb0d083290b30f",
+      "intent": "EARN_MONEY",
+      "timestamp": 1783960847.7022405
+    },
+    {
+      "role": "user",
+      "text": "test",
+      "intent": "UNKNOWN",
+      "timestamp": 1783960919.3366387
+    },
+    {
+      "role": "jarvis",
+      "text": "Das habe ich leider nicht verstanden. Kannst du das bitte anders formulieren?\nTippe 'Hilfe' fuer eine Liste verfuegbarer Befehle.",
+      "intent": "UNKNOWN",
+      "timestamp": 1783960919.3403263
+    }
+  ],
+  "user_preferences": {},
+  "learned_patterns": []
+}

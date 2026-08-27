@@ -1,0 +1,260 @@
+2026-07-13 16:51:45,720 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 16:51:45,721 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 16:51:45,722 [INFO] JARVIS: Mikrofon gefunden: Microsoft Sound Mapper - Input
+2026-07-13 16:51:46,507 [INFO] JARVIS: Text-to-Sprache-Engine initialisiert.
+2026-07-13 16:52:35,840 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 16:52:35,842 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 16:52:47,862 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 16:53:09,122 [INFO] JARVIS: HUD Nachricht: wie spaet ist es?
+2026-07-13 16:53:09,132 [INFO] JARVIS: Intent: TIME (Confidence: 0.94) | Entities: {}
+2026-07-13 16:53:22,443 [INFO] JARVIS: HUD Nachricht: Hast du TTS
+2026-07-13 16:53:22,445 [INFO] JARVIS: Intent: UNKNOWN (Confidence: 0.00) | Entities: {}
+2026-07-13 16:53:34,271 [INFO] JARVIS: HUD Nachricht: tschuess
+2026-07-13 16:53:34,273 [INFO] JARVIS: Intent: FAREWELL (Confidence: 1.00) | Entities: {}
+2026-07-13 16:53:37,729 [INFO] JARVIS: HUD Nachricht: wie ist das wetter?
+2026-07-13 16:53:37,731 [INFO] JARVIS: Intent: WEATHER (Confidence: 0.95) | Entities: {}
+2026-07-13 16:53:40,787 [INFO] JARVIS: HUD Nachricht: wie ist das wetter?
+2026-07-13 16:53:40,789 [INFO] JARVIS: Intent: WEATHER (Confidence: 0.95) | Entities: {}
+2026-07-13 16:53:41,997 [INFO] JARVIS: HUD Nachricht: wie spaet ist es?
+2026-07-13 16:53:41,998 [INFO] JARVIS: Intent: TIME (Confidence: 0.94) | Entities: {}
+2026-07-13 16:53:42,663 [INFO] JARVIS: HUD Nachricht: welche aufgaben?
+2026-07-13 16:53:42,665 [INFO] JARVIS: Intent: TASK_LIST (Confidence: 0.94) | Entities: {}
+2026-07-13 16:53:43,263 [INFO] JARVIS: HUD Nachricht: hilfe
+2026-07-13 16:53:43,265 [INFO] JARVIS: Intent: HELP (Confidence: 1.00) | Entities: {}
+2026-07-13 16:53:58,652 [INFO] JARVIS: HUD Nachricht: welche aufgaben?
+2026-07-13 16:53:58,654 [INFO] JARVIS: Intent: TASK_LIST (Confidence: 0.94) | Entities: {}
+2026-07-13 16:54:13,350 [INFO] JARVIS: HUD Nachricht: Timer 50 Sekunden
+2026-07-13 16:54:13,352 [INFO] JARVIS: Intent: TIMER_SET (Confidence: 0.29) | Entities: {'number': 50, 'duration_text': '50 sekunde'}
+2026-07-13 16:54:13,353 [INFO] JARVIS: Timer gestellt: 50 Sekunden
+2026-07-13 16:54:30,406 [INFO] JARVIS: HUD Nachricht: Timer 2
+2026-07-13 16:54:30,408 [INFO] JARVIS: Intent: TIMER_SET (Confidence: 0.71) | Entities: {'number': 2}
+2026-07-13 16:54:41,067 [INFO] JARVIS: HUD Nachricht: Timer 2 sekunden
+2026-07-13 16:54:41,069 [INFO] JARVIS: Intent: TIMER_SET (Confidence: 0.31) | Entities: {'number': 2, 'duration_text': '2 sekunde'}
+2026-07-13 16:54:41,069 [INFO] JARVIS: Timer abgebrochen.
+2026-07-13 16:54:41,070 [INFO] JARVIS: Timer gestellt: 2 Sekunden
+2026-07-13 16:54:43,083 [INFO] JARVIS: Timer abgelaufen - Benachrichtigung ausgegeben.
+2026-07-13 17:05:29,077 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:05:29,091 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:26:21,296 [INFO] JARVIS: HUD Client getrennt.
+2026-07-13 17:26:22,127 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:26:33,628 [INFO] JARVIS: HUD Client getrennt.
+2026-07-13 17:27:08,787 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:27:08,789 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:27:16,526 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:27:24,240 [INFO] JARVIS: HUD Nachricht: welche aufgaben hast du fuer mich
+2026-07-13 17:27:24,245 [INFO] JARVIS: Intent: TASK_LIST (Confidence: 0.88) | Entities: {}
+2026-07-13 17:27:41,499 [INFO] JARVIS: HUD Nachricht: wie ist das wetter
+2026-07-13 17:27:41,502 [INFO] JARVIS: Intent: WEATHER (Confidence: 1.00) | Entities: {}
+2026-07-13 17:28:05,970 [INFO] JARVIS: HUD Nachricht: Wie gehts dir
+2026-07-13 17:28:05,971 [INFO] JARVIS: Intent: UNKNOWN (Confidence: 0.00) | Entities: {}
+2026-07-13 17:28:15,384 [INFO] JARVIS: HUD Nachricht: DU TROTTEL
+2026-07-13 17:28:15,387 [INFO] JARVIS: Intent: UNKNOWN (Confidence: 0.00) | Entities: {}
+2026-07-13 17:28:31,475 [INFO] JARVIS: HUD Nachricht: DAS HABRE ICH LEIDER NICHT VERSTANDEN
+2026-07-13 17:28:31,478 [INFO] JARVIS: Intent: UNKNOWN (Confidence: 0.00) | Entities: {}
+2026-07-13 17:28:37,715 [INFO] JARVIS: HUD Nachricht: hilfe
+2026-07-13 17:28:37,717 [INFO] JARVIS: Intent: HELP (Confidence: 1.00) | Entities: {}
+2026-07-13 17:28:39,592 [INFO] JARVIS: HUD Nachricht: welche aufgaben hast du fuer mich
+2026-07-13 17:28:39,593 [INFO] JARVIS: Intent: TASK_LIST (Confidence: 0.88) | Entities: {}
+2026-07-13 17:28:42,265 [INFO] JARVIS: HUD Nachricht: rechne 2 plus 2
+2026-07-13 17:28:42,268 [INFO] JARVIS: Intent: CALCULATE (Confidence: 0.40) | Entities: {'number': 2, 'expression': '2 plus 2'}
+2026-07-13 17:28:42,268 [INFO] JARVIS: Berechnung: 2 + 2 = 4
+2026-07-13 17:28:48,670 [INFO] JARVIS: HUD Nachricht: ! PLUS §
+2026-07-13 17:28:48,672 [INFO] JARVIS: Intent: UNKNOWN (Confidence: 0.00) | Entities: {}
+2026-07-13 17:28:57,401 [INFO] JARVIS: HUD Nachricht: 1 plus 2
+2026-07-13 17:28:57,404 [INFO] JARVIS: Intent: UNKNOWN (Confidence: 0.00) | Entities: {'number': 1}
+2026-07-13 17:43:30,363 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:43:30,365 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:43:30,372 [INFO] JARVIS: Intent: CALCULATE (Confidence: 0.47) | Entities: {'expression': ''}
+2026-07-13 17:43:30,377 [INFO] JARVIS: Intent: CAMERA_LIST (Confidence: 0.61) | Entities: {}
+2026-07-13 17:44:07,760 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:44:07,772 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:44:07,779 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.47) | Entities: {'search_query': 'python'}
+2026-07-13 17:44:34,974 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:44:34,986 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:44:34,993 [INFO] JARVIS: Intent: CHAT (Confidence: 0.50) | Entities: {}
+2026-07-13 17:44:34,997 [INFO] JARVIS: Intent: CHAT (Confidence: 1.00) | Entities: {}
+2026-07-13 17:44:46,481 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:44:46,493 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:45:04,216 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:45:04,218 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:46:15,528 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:46:46,789 [INFO] JARVIS: HUD Client getrennt.
+2026-07-13 17:46:47,695 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:46:56,435 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:46:56,436 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:46:59,430 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:47:04,184 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:47:24,149 [INFO] JARVIS: HUD Nachricht: hilfe
+2026-07-13 17:47:24,159 [INFO] JARVIS: Intent: HELP (Confidence: 1.00) | Entities: {}
+2026-07-13 17:47:36,274 [INFO] JARVIS: HUD Nachricht: welche aufgaben hast du fuer mich
+2026-07-13 17:47:36,276 [INFO] JARVIS: Intent: TASK_LIST (Confidence: 0.88) | Entities: {}
+2026-07-13 17:47:39,555 [INFO] JARVIS: HUD Nachricht: sag mir die uhrzeit
+2026-07-13 17:47:39,558 [INFO] JARVIS: Intent: TIME (Confidence: 1.00) | Entities: {}
+2026-07-13 17:47:43,916 [INFO] JARVIS: HUD Nachricht: wie ist das wetter
+2026-07-13 17:47:43,918 [INFO] JARVIS: Intent: WEATHER (Confidence: 1.00) | Entities: {}
+2026-07-13 17:48:08,029 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 17:48:08,034 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 17:48:11,376 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 17:48:11,379 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 17:48:20,938 [INFO] JARVIS: HUD Nachricht: zeig kamera zurich
+2026-07-13 17:48:20,941 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 0.94) | Entities: {'camera_query': 'zurich'}
+2026-07-13 17:48:37,656 [INFO] JARVIS: HUD Nachricht: zeig kamera tokyo
+2026-07-13 17:48:37,659 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 1.00) | Entities: {'camera_query': 'tokyo'}
+2026-07-13 17:48:57,335 [INFO] JARVIS: HUD Nachricht: wo ist die kamera
+2026-07-13 17:48:57,337 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 0.35) | Entities: {'camera_query': 'wo ist die kamera'}
+2026-07-13 17:49:07,055 [INFO] JARVIS: HUD Nachricht: london
+2026-07-13 17:49:07,059 [INFO] JARVIS: Intent: UNKNOWN (Confidence: 0.00) | Entities: {}
+2026-07-13 17:49:21,289 [INFO] JARVIS: HUD Nachricht: Was ist london
+2026-07-13 17:49:21,293 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.50) | Entities: {'search_query': 'london'}
+2026-07-13 17:49:40,171 [INFO] JARVIS: HUD Nachricht: welche aufgaben hast du fuer mich
+2026-07-13 17:49:40,174 [INFO] JARVIS: Intent: TASK_LIST (Confidence: 0.88) | Entities: {}
+2026-07-13 17:54:25,582 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:54:25,594 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:54:45,735 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:54:45,737 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:55:24,429 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:55:24,431 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:56:30,657 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:56:30,658 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:56:46,792 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:56:46,793 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:56:55,352 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:56:55,354 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:57:47,274 [INFO] JARVIS: HUD Client getrennt.
+2026-07-13 17:57:48,209 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:58:00,227 [INFO] JARVIS: HUD Client getrennt.
+2026-07-13 17:58:01,145 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:58:13,859 [INFO] JARVIS: HUD Nachricht: zeig kamera zurich
+2026-07-13 17:58:13,863 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 0.94) | Entities: {'camera_query': 'zurich'}
+2026-07-13 17:58:27,924 [INFO] JARVIS: HUD Nachricht: zeig kamera london
+2026-07-13 17:58:27,926 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 0.94) | Entities: {'camera_query': 'london'}
+2026-07-13 17:58:44,248 [INFO] JARVIS: HUD Client getrennt.
+2026-07-13 17:58:54,363 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 17:58:54,375 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 17:58:56,490 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:59:06,267 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 17:59:24,371 [INFO] JARVIS: HUD Nachricht: Hallo
+2026-07-13 17:59:24,378 [INFO] JARVIS: Intent: GREETING (Confidence: 1.00) | Entities: {}
+2026-07-13 17:59:42,248 [INFO] JARVIS: HUD Nachricht: Verdiene 500 chf ohne meine hilfe
+2026-07-13 17:59:42,250 [INFO] JARVIS: Intent: HELP (Confidence: 0.15) | Entities: {'number': 500}
+2026-07-13 17:59:59,337 [INFO] JARVIS: HUD Nachricht: Verdiene 500 chf ohne meine hilfe
+2026-07-13 17:59:59,340 [INFO] JARVIS: Intent: HELP (Confidence: 0.15) | Entities: {'number': 500}
+2026-07-13 18:00:01,210 [INFO] JARVIS: HUD Nachricht: welche aufgaben hast du fuer mich
+2026-07-13 18:00:01,213 [INFO] JARVIS: Intent: TASK_LIST (Confidence: 0.88) | Entities: {}
+2026-07-13 18:00:04,136 [INFO] JARVIS: HUD Nachricht: sag mir die uhrzeit
+2026-07-13 18:00:04,139 [INFO] JARVIS: Intent: TIME (Confidence: 1.00) | Entities: {}
+2026-07-13 18:00:08,011 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:08,017 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:11,231 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:11,233 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:12,586 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:12,589 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:13,346 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:13,349 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:13,768 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:13,773 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:14,080 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:14,083 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:14,348 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:14,351 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:14,545 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:14,549 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:14,743 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:14,747 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:14,927 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:14,932 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:15,149 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:15,154 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:15,360 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:15,364 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:15,550 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:15,555 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:15,756 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:15,762 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:15,979 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:15,996 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:16,169 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:16,173 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:16,366 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:16,370 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:16,539 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:16,545 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:16,588 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:16,615 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:16,788 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:16,792 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:16,931 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:16,935 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:17,225 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:17,230 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:17,338 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:17,343 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:17,419 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:17,862 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:17,932 [INFO] JARVIS: HUD Nachricht: hilfe
+2026-07-13 18:00:17,937 [INFO] JARVIS: Intent: HELP (Confidence: 1.00) | Entities: {}
+2026-07-13 18:00:18,326 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:18,435 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:18,438 [INFO] JARVIS: HUD Nachricht: welche aufgaben hast du fuer mich
+2026-07-13 18:00:18,444 [INFO] JARVIS: Intent: TASK_LIST (Confidence: 0.88) | Entities: {}
+2026-07-13 18:00:18,711 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:19,187 [INFO] JARVIS: HUD Nachricht: hilfe
+2026-07-13 18:00:19,192 [INFO] JARVIS: Intent: HELP (Confidence: 1.00) | Entities: {}
+2026-07-13 18:00:19,384 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:19,549 [INFO] JARVIS: HUD Nachricht: welche aufgaben hast du fuer mich
+2026-07-13 18:00:19,555 [INFO] JARVIS: Intent: TASK_LIST (Confidence: 0.88) | Entities: {}
+2026-07-13 18:00:19,953 [INFO] JARVIS: HUD Nachricht: hilfe
+2026-07-13 18:00:19,957 [INFO] JARVIS: Intent: HELP (Confidence: 1.00) | Entities: {}
+2026-07-13 18:00:20,254 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:20,404 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:20,574 [INFO] JARVIS: HUD Nachricht: sag mir die uhrzeit
+2026-07-13 18:00:20,579 [INFO] JARVIS: Intent: TIME (Confidence: 1.00) | Entities: {}
+2026-07-13 18:00:20,597 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:20,747 [INFO] JARVIS: HUD Nachricht: sag mir die uhrzeit
+2026-07-13 18:00:20,756 [INFO] JARVIS: Intent: TIME (Confidence: 1.00) | Entities: {}
+2026-07-13 18:00:20,928 [INFO] JARVIS: HUD Nachricht: wie ist das wetter
+2026-07-13 18:00:20,932 [INFO] JARVIS: Intent: WEATHER (Confidence: 1.00) | Entities: {}
+2026-07-13 18:00:21,080 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:21,121 [INFO] JARVIS: HUD Nachricht: suche nach kuenstliche intelligenz
+2026-07-13 18:00:21,127 [INFO] JARVIS: Intent: WEB_SEARCH (Confidence: 0.44) | Entities: {'search_query': 'kuenstliche intelligenz'}
+2026-07-13 18:00:21,275 [INFO] JARVIS: HUD Nachricht: zeig kamera zurich
+2026-07-13 18:00:21,280 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 0.94) | Entities: {'camera_query': 'zurich'}
+2026-07-13 18:00:21,360 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:22,029 [INFO] JARVIS: HUD Nachricht: zeig kamera zurich
+2026-07-13 18:00:22,034 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 0.94) | Entities: {'camera_query': 'zurich'}
+2026-07-13 18:00:22,221 [INFO] JARVIS: HUD Nachricht: zeig kamera zurich
+2026-07-13 18:00:22,226 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 0.94) | Entities: {'camera_query': 'zurich'}
+2026-07-13 18:00:22,839 [DEBUG] JARVIS: Wikipedia-Suche fehlgeschlagen: Expecting value: line 1 column 1 (char 0)
+2026-07-13 18:00:29,536 [INFO] JARVIS: HUD Nachricht: zeig kamera zurich
+2026-07-13 18:00:29,539 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 0.94) | Entities: {'camera_query': 'zurich'}
+2026-07-13 18:00:53,714 [INFO] JARVIS: HUD Nachricht: zeig kamera tokyo
+2026-07-13 18:00:53,717 [INFO] JARVIS: Intent: CAMERA_SHOW (Confidence: 1.00) | Entities: {'camera_query': 'tokyo'}
+2026-07-13 18:11:15,408 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 18:11:15,442 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 18:12:11,833 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 18:12:11,835 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 18:12:47,832 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 18:12:47,834 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 18:13:15,050 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 18:13:15,052 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 18:13:23,284 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 18:13:23,285 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 18:39:21,702 [INFO] JARVIS: HUD Client getrennt.
+2026-07-13 18:39:22,745 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 18:39:29,355 [INFO] JARVIS: HUD Client getrennt.
+2026-07-13 18:39:33,316 [INFO] JARVIS: HUD Client getrennt.
+2026-07-13 18:40:25,231 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-07-13 18:40:25,233 [INFO] JARVIS: JARVIS Engine bereit.
+2026-07-13 18:40:31,754 [INFO] JARVIS: HUD Client verbunden.
+2026-07-13 18:40:44,629 [INFO] JARVIS: HUD Nachricht: Verdiene 500 CHF
+2026-07-13 18:40:44,632 [INFO] JARVIS: Intent: EARN_MONEY (Confidence: 0.44) | Entities: {'number': 500, 'topic': '500 chf'}
+2026-07-13 18:41:59,333 [INFO] JARVIS: HUD Nachricht: test
+2026-07-13 18:41:59,340 [INFO] JARVIS: Intent: UNKNOWN (Confidence: 0.00) | Entities: {}
+2026-08-27 20:18:42,465 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-08-27 20:18:42,510 [INFO] JARVIS: JARVIS Engine bereit.
+2026-08-27 20:19:29,348 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-08-27 20:19:29,350 [INFO] JARVIS: JARVIS Engine bereit.
+2026-08-27 20:21:27,317 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-08-27 20:21:27,319 [INFO] JARVIS: JARVIS Engine bereit.
+2026-08-27 20:25:28,767 [INFO] JARVIS: JARVIS Engine wird initialisiert...
+2026-08-27 20:25:28,769 [INFO] JARVIS: JARVIS Engine bereit.
