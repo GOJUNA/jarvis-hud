@@ -1,8 +1,8 @@
-# wsgi.py - Entry point für gunicorn
-from web.app import socketio
+# wsgi.py - Entry point fuer gunicorn auf Render
+from web.app import app, start_background_threads
 
-# Flask-App ist socketio.server (bei Flask-SocketIO)
-app = socketio.server
+# Hintergrund-Threads starten (System-Stats, Erinnerungen)
+start_background_threads()
 
-if __name__ == "__main__":
-    socketio.run(app, host="0.0.0.0", port=5000)
+# `app` ist die Flask WSGI-App - gunicorn startet mit wsgi:app
+# SocketIO laeuft im threading-Modus via Long-Polling (kein eventlet/gevent noetig)
