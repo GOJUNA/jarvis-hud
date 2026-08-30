@@ -200,10 +200,11 @@ def handle_message(data):
         return
 
     log.info(f"HUD Nachricht: {user_text}")
+    # Nur an den Absender (private Session) - nicht an alle Geräte
     emit("user_message", {
         "text": user_text,
         "timestamp": datetime.now().strftime("%H:%M:%S"),
-    }, broadcast=True)
+    })
 
     # Parse first to detect camera intent
     from core.intent import Intent
@@ -215,9 +216,9 @@ def handle_message(data):
         "text": response,
         "timestamp": datetime.now().strftime("%H:%M:%S"),
         "is_farewell": not jarvis.running,
-    }, broadcast=True)
+    })
 
-    # If camera intent, also emit camera feed
+    # If camera intent, also emit camera feed (nur an Absender)
     if parsed.intent == Intent.CAMERA_SHOW:
         cam_query = parsed.entities.get("camera_query", "")
         if cam_query:
@@ -230,15 +231,16 @@ def handle_message(data):
                     "city": cam["city"],
                     "country": cam["country"],
                     "url": cam["url"],
+                    "type": cam.get("type", "image"),
                     "thumbnail": cam["thumbnail"],
-                }, broadcast=True)
+                })
             else:
-                emit("camera_error", {"message": f"Keine Kamera fuer '{cam_query}' gefunden."}, broadcast=True)
+                emit("camera_error", {"message": f"Keine Kamera fuer '{cam_query}' gefunden."})
 
 
 @socketio.on("camera_show")
 def handle_camera_show(data):
-    """Zeigt eine Kamera im HUD."""
+    """Zeigt eine Kamera im HUD (nur an Anfragenden)."""
     camera_id = data.get("camera_id", "")
     cam = jarvis.cameras.get_camera(camera_id)
     if cam:
@@ -246,19 +248,21 @@ def handle_camera_show(data):
             "id": cam["id"],
             "name": cam["name"],
             "city": cam["city"],
+            "country": cam.get("country", ""),
             "url": cam["url"],
+            "type": cam.get("type", "image"),
             "thumbnail": cam["thumbnail"],
-        }, broadcast=True)
+        })
     else:
-        emit("camera_error", {"message": f"Kamera '{camera_id}' nicht gefunden."}, broadcast=True)
+        emit("camera_error", {"message": f"Kamera '{camera_id}' nicht gefunden."})
 
 
 @socketio.on("camera_search")
 def handle_camera_search(data):
-    """Sucht Kameras."""
+    """Sucht Kameras (nur an Anfragenden)."""
     query = data.get("query", "")
     results = jarvis.cameras.search_cameras(query)
-    emit("camera_results", {"cameras": results}, broadcast=True)
+    emit("camera_results", {"cameras": results})
 
 
 def start_background_threads():

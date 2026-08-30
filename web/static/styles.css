@@ -117,10 +117,10 @@ html, body {
 }
 .status-divider { color: var(--border); font-weight: 300; }
 
-/* Typing Indicator */
+/* Typing Indicator - ueber Input, nicht ueber Chat */
 .typing-indicator {
     position: fixed;
-    bottom: 138px;
+    bottom: 168px;
     left: 50%;
     transform: translateX(-50%);
     display: none;
@@ -133,6 +133,7 @@ html, body {
     backdrop-filter: blur(12px);
     z-index: 160;
     box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    pointer-events: none;
 }
 .typing-indicator span {
     width: 6px; height: 6px;
@@ -152,22 +153,25 @@ html, body {
     margin-left: 2px;
 }
 
-/* Chat Overlay - besseres Scrollen + Glass */
+/* Chat Overlay - besseres Scrollen + Glass, verdeckt letzten Text nicht mehr */
 .chat-overlay {
     position: fixed;
-    bottom: 148px;
+    bottom: 188px;
     left: 50%;
     transform: translateX(-50%);
     width: min(720px, calc(100vw - 24px));
-    max-height: 42vh;
+    max-height: calc(100vh - 280px);
+    max-height: calc(100dvh - 280px);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
     z-index: 150;
-    padding: 6px 2px 6px 6px;
+    padding: 10px 8px 14px 6px;
     scrollbar-width: thin;
     scrollbar-color: rgba(148,163,184,0.25) transparent;
+    scroll-padding-bottom: 16px;
+    scroll-behavior: smooth;
 }
 .chat-overlay::-webkit-scrollbar { width: 4px; }
 .chat-overlay::-webkit-scrollbar-thumb { background: rgba(148,163,184,0.25); border-radius: 999px; }
@@ -430,10 +434,11 @@ html, body {
 @media (max-width: 640px) {
     .status-bar { padding: 8px 12px; }
     .logo-text { font-size: 0.82rem; letter-spacing: 4px; }
-    .chat-overlay { bottom: 162px; max-height: 38vh; }
+    .chat-overlay { bottom: 188px; max-height: calc(100dvh - 300px); }
     .input-area { bottom: 10px; padding: 10px; border-radius: 16px; }
     .camera-overlay { top: 58px; right: 10px; left: 10px; width: auto; }
     .corner { display: none; }
+    .typing-indicator { bottom: 168px; }
 }
 
 /* Reduced motion */
