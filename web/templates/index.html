@@ -49,6 +49,12 @@
         <div class="camera-info" id="camera-info"></div>
     </div>
 
+    <!-- Typing Indicator -->
+    <div class="typing-indicator" id="typing-indicator">
+        <span></span><span></span><span></span>
+        <span class="typing-text">JARVIS denkt...</span>
+    </div>
+
     <!-- Bottom Input Area -->
     <div class="input-area">
         <!-- Quick Action Buttons -->
@@ -101,6 +107,8 @@
     <div class="corner corner-tr"></div>
     <div class="corner corner-bl"></div>
     <div class="corner corner-br"></div>
+
+    <audio id="tts-audio" preload="none" style="display:none"></audio>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>

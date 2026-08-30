@@ -342,6 +342,33 @@ class JarvisEngine:
         )
 
     def _handle_unknown(self, parsed: ParsedCommand) -> str:
+        text = parsed.raw_text.strip()
+        low = text.lower()
+
+        # Versuche hilfreiche Antworten statt "nicht verstanden"
+        # Kurze Chats
+        if len(low.split()) <= 3:
+            if any(w in low for w in ["ok", "ja", "nein", "cool", "nice", "danke", "haha", "lol"]):
+                return "Alles klar! Sag Bescheid wenn du was brauchst."
+            if "?" in text:
+                # Frage -> versuche Websuche
+                try:
+                    return self.web_search.search(text)
+                except:
+                    pass
+
+        # Laengere freie Eingaben -> als Websuche/Recherche behandeln
+        if len(text.split()) >= 3 and not low.startswith(("hilfe", "help")):
+            # Wirkt wie eine Frage oder ein Thema?
+            question_words = ["was", "wer", "wie", "warum", "wann", "wo", "welch", "kannst", "erklär", "erzaehl", "wieso", "weshalb"]
+            if any(low.startswith(w) or f" {w} " in f" {low} " for w in question_words) or "?" in text:
+                try:
+                    result = self.web_search.search(text)
+                    if result and "Keine Ergebnisse" not in result:
+                        return result
+                except:
+                    pass
+
         recent = self.memory.get_recent_messages(3)
         context_hint = ""
         if len(recent) >= 2:
@@ -351,9 +378,11 @@ class JarvisEngine:
             elif prev_intent == "NOTE_ADD":
                 context_hint = " Meintest du eine Notiz hinzuzufuegen?"
 
+        # Freundlicher, weniger "kacke"
         return (
-            f"Das habe ich leider nicht verstanden. Kannst du das bitte anders formulieren?{context_hint}\n"
-            "Tippe 'Hilfe' fuer eine Liste verfuegbarer Befehle."
+            f"Hmm, das habe ich nicht ganz verstanden. Meintest du das anders?{context_hint}\n"
+            f"Du kannst frei mit mir sprechen - z.B. 'Wie spät ist es?', 'Suche nach Quantencomputer', 'Erstelle eine Notiz: Einkaufen'.\n"
+            f"'{text[:60]}' klingt spannend - erzaehl mir mehr oder tippe 'Hilfe'."
         )
 
     def check_reminders(self) -> list[str]:

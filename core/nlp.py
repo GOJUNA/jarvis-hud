@@ -2,6 +2,14 @@ import re
 from dataclasses import dataclass, field
 from core.intent import Intent
 
+# Semantisches Modell optional
+try:
+    from core.semantic import classify as semantic_classify
+    HAS_SEMANTIC = True
+except ImportError:
+    HAS_SEMANTIC = False
+    semantic_classify = None
+
 
 @dataclass
 class ParsedCommand:
@@ -253,10 +261,22 @@ class NLPEngine:
     }
 
     def parse(self, text: str) -> ParsedCommand:
-        """Analysiert einen Text und erkennt Intent + Entitaeten."""
+        """Analysiert einen Text und erkennt Intent + Entitaeten.
+        Reihenfolge: 1. Semantik (Embeddings/TF-IDF), 2. Keyword-Scoring, 3. Fuzzy.
+        """
         cleaned = text.lower().strip()
         parsed = ParsedCommand(raw_text=text)
 
+        # 1. Semantik zuerst (versteht freie Sprache)
+        if HAS_SEMANTIC:
+            sem_intent, sem_conf = semantic_classify(text)
+            if sem_intent is not None and sem_conf >= 0.32:
+                parsed.intent = sem_intent
+                parsed.confidence = sem_conf
+                parsed.entities = self._extract_entities(cleaned, parsed.intent)
+                return parsed
+
+        # 2. Klassisches Keyword-Scoring
         scores = {}
         for intent, keywords in self.KEYWORDS.items():
             score = 0
@@ -272,12 +292,37 @@ class NLPEngine:
             if best_score >= 0.08:
                 parsed.intent = best_intent
                 parsed.confidence = min(best_score, 1.0)
+                # Semantik als Tie-Breaker bei knappen Scores
+                if HAS_SEMANTIC and best_score < 0.25:
+                    sem_intent, sem_conf = semantic_classify(text)
+                    if sem_intent is not None and sem_conf > best_score + 0.1:
+                        parsed.intent = sem_intent
+                        parsed.confidence = sem_conf
+            else:
+                # Schwacher Score -> versuche Semantik nochmal mit niedrigerer Schwelle
+                if HAS_SEMANTIC:
+                    sem_intent, sem_conf = semantic_classify(text)
+                    if sem_intent is not None and sem_conf >= 0.28:
+                        parsed.intent = sem_intent
+                        parsed.confidence = sem_conf
+                    else:
+                        parsed.intent = self._guess_intent_fuzzy(cleaned)
+                        parsed.confidence = best_score if parsed.intent != Intent.UNKNOWN else 0.0
+                else:
+                    parsed.intent = self._guess_intent_fuzzy(cleaned)
+                    parsed.confidence = best_score if parsed.intent != Intent.UNKNOWN else 0.0
+        else:
+            if HAS_SEMANTIC:
+                sem_intent, sem_conf = semantic_classify(text)
+                if sem_intent is not None and sem_conf >= 0.28:
+                    parsed.intent = sem_intent
+                    parsed.confidence = sem_conf
+                else:
+                    parsed.intent = self._guess_intent_fuzzy(cleaned)
+                    parsed.confidence = 0.0
             else:
                 parsed.intent = self._guess_intent_fuzzy(cleaned)
-                parsed.confidence = best_score if parsed.intent != Intent.UNKNOWN else 0.0
-        else:
-            parsed.intent = self._guess_intent_fuzzy(cleaned)
-            parsed.confidence = 0.0
+                parsed.confidence = 0.0
 
         parsed.entities = self._extract_entities(cleaned, parsed.intent)
         return parsed

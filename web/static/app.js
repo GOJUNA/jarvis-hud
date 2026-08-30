@@ -19,8 +19,12 @@ let micPermissionGranted = false;
 let scene, camera, renderer, sphere, rings = [], particles;
 let mouseX = 0, mouseY = 0;
 let hologramState = 0;
-let selectedVoice = null;
-let voicesLoaded = false;
+let hologramStateTimeout = null;
+let ttsQueue = [];
+let isSpeaking = false;
+let audioEl = null;
+let audioContext = null;
+let analyser = null;
 
 // ============================================
 // INIT
@@ -142,15 +146,38 @@ function animate() {
 
 function updateHologramState(t) {
     const m = sphere.material;
+    // Lip-sync: wenn TTS laeuft, mit Analyser pulsen
+    let lipBoost = 0;
+    if (isSpeaking && analyser) {
+        const data = new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteFrequencyData(data);
+        let sum = 0;
+        for (let i = 0; i < data.length; i++) sum += data[i];
+        lipBoost = (sum / data.length) / 255; // 0..1
+    }
     switch (hologramState) {
-        case 0: m.color.setHex(0x00d4ff); m.opacity = 0.05 + Math.sin(t * 2) * 0.02; break;
+        case 0: m.color.setHex(0x00d4ff); m.opacity = 0.05 + Math.sin(t * 2) * 0.02 + lipBoost * 0.08; break;
         case 1: m.color.setHex(0x0088ff); m.opacity = 0.1 + Math.sin(t * 8) * 0.05; sphere.rotation.y += 0.05; break;
-        case 2: m.color.setHex(0x00ff88); m.opacity = 0.15; setTimeout(() => { hologramState = 0; }, 2000); break;
-        case 3: m.color.setHex(0xff3333); m.opacity = 0.1 + Math.sin(t * 10) * 0.05; setTimeout(() => { hologramState = 0; }, 2000); break;
+        case 2: m.color.setHex(0x00ff88); m.opacity = 0.15 + lipBoost * 0.1; break;
+        case 3: m.color.setHex(0xff3333); m.opacity = 0.1 + Math.sin(t * 10) * 0.05; break;
+    }
+    if (isSpeaking) {
+        sphere.scale.setScalar(1 + lipBoost * 0.05);
+    } else {
+        sphere.scale.setScalar(1);
     }
 }
 
-function setHologramState(state) { hologramState = state; }
+function setHologramState(state) {
+    hologramState = state;
+    if (hologramStateTimeout) clearTimeout(hologramStateTimeout);
+    if (state === 2 || state === 3) {
+        hologramStateTimeout = setTimeout(() => { hologramState = 0; }, 2000);
+    }
+    // Typing indicator
+    const ind = document.getElementById('typing-indicator');
+    if (ind) ind.style.display = state === 1 ? 'flex' : 'none';
+}
 
 // ============================================
 // CLOCK
@@ -163,85 +190,88 @@ function updateClock() {
 function getTimeStamp() { return new Date().toLocaleTimeString('de-DE', { hour12: false }); }
 
 // ============================================
-// Text-to-Speech - FIXED: Cache male voice
+// Text-to-Speech - SERVER (Edge Neural, feste maennliche Stimme Conrad)
 // ============================================
 function initTTS() {
-    if (!window.speechSynthesis) { console.warn('TTS nicht verfuegbar.'); return; }
-
-    function pickVoice() {
-        if (voicesLoaded) return;
-        const voices = window.speechSynthesis.getVoices();
-        if (voices.length === 0) return;
-
-        // Male German voice preference list (Windows, Mac, Linux)
-        const maleNames = [
-            'Microsoft Hans', 'Microsoft Conrad', 'Microsoft David',
-            'Google Deutsch', 'Google Deutsch (German (Germany))',
-            'Stefan', 'Hans', 'Klaus', 'Peter', 'Thomas',
-            'Markus', 'Steffen', 'Yannick',
-            'de-DE-Hans', 'de-DE-Conrad',
-        ];
-
-        // 1. Try exact male name match
-        for (const name of maleNames) {
-            const found = voices.find(v => v.name === name);
-            if (found) { selectedVoice = found; voicesLoaded = true; console.log('TTS maennliche Stimme:', found.name); return; }
-        }
-
-        // 2. Try partial male name match
-        for (const name of maleNames) {
-            const found = voices.find(v => v.name.includes(name));
-            if (found) { selectedVoice = found; voicesLoaded = true; console.log('TTS Stimme (partiell):', found.name); return; }
-        }
-
-        // 3. Any German voice - check if male by name heuristics
-        const germanVoices = voices.filter(v => v.lang.startsWith('de'));
-        const femaleHints = ['female', 'fem', 'woman', 'katja', 'anna', 'petra', 'sandra', 'sabine', 'monika', 'helena'];
-        for (const v of germanVoices) {
-            const lowerName = v.name.toLowerCase();
-            const isFemale = femaleHints.some(h => lowerName.includes(h));
-            if (!isFemale) { selectedVoice = v; voicesLoaded = true; console.log('TTS Stimme (fallback):', v.name); return; }
-        }
-
-        // 4. Just use first German voice
-        if (germanVoices.length > 0) {
-            selectedVoice = germanVoices[0];
-            voicesLoaded = true;
-            console.log('TTS Stimme (erste deutsche):', selectedVoice.name);
-        }
+    audioEl = document.getElementById('tts-audio');
+    if (!audioEl) {
+        audioEl = document.createElement('audio');
+        audioEl.id = 'tts-audio';
+        audioEl.style.display = 'none';
+        document.body.appendChild(audioEl);
     }
-
-    // Voices load async - try now and also on event
-    pickVoice();
-    window.speechSynthesis.onvoiceschanged = () => pickVoice();
-
-    // Retry after short delay in case voices weren't ready
-    setTimeout(pickVoice, 500);
-    setTimeout(pickVoice, 1500);
+    audioEl.addEventListener('ended', () => {
+        isSpeaking = false;
+        setHologramState(0);
+        playNextTTS();
+    });
+    audioEl.addEventListener('error', () => {
+        isSpeaking = false;
+        setHologramState(0);
+        playNextTTS();
+    });
+    audioEl.addEventListener('play', () => {
+        isSpeaking = true;
+        setHologramState(2);
+        // Lip-sync via Web Audio Analyser
+        try {
+            if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            if (audioContext.state === 'suspended') audioContext.resume();
+            const src = audioContext.createMediaElementSource(audioEl);
+            analyser = audioContext.createAnalyser();
+            analyser.fftSize = 256;
+            src.connect(analyser);
+            analyser.connect(audioContext.destination);
+        } catch (e) { /* Analyser optional */ }
+    });
 }
 
 function speak(text) {
-    if (!ttsEnabled || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
+    if (!ttsEnabled || !text || !text.trim()) return;
+    // Text kuerzen, Sonderzeichen fuer URL
+    const clean = text.trim().substring(0, 800);
+    ttsQueue.push(clean);
+    if (!isSpeaking) playNextTTS();
+}
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'de-DE';
-    utterance.rate = 1.0;
-    utterance.pitch = 0.8;
-
-    if (selectedVoice) {
-        utterance.voice = selectedVoice;
-    } else {
-        // Emergency fallback - find ANY German voice right now
-        const voices = window.speechSynthesis.getVoices();
-        const german = voices.find(v => v.lang.startsWith('de'));
-        if (german) {
-            utterance.voice = german;
-            selectedVoice = german;
+async function playNextTTS() {
+    if (ttsQueue.length === 0) { isSpeaking = false; return; }
+    const text = ttsQueue.shift();
+    isSpeaking = true;
+    setHologramState(2);
+    try {
+        const url = `/api/tts?text=${encodeURIComponent(text)}`;
+        const resp = await fetch(url);
+        if (!resp.ok) throw new Error(`TTS HTTP ${resp.status}`);
+        const blob = await resp.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        audioEl.src = blobUrl;
+        audioEl.onended = () => {
+            URL.revokeObjectURL(blobUrl);
+            isSpeaking = false;
+            setHologramState(0);
+            playNextTTS();
+        };
+        await audioEl.play();
+    } catch (e) {
+        console.warn('Server TTS fehlgeschlagen, Fallback Browser:', e);
+        // Fallback: Browser TTS kurz
+        try {
+            const u = new SpeechSynthesisUtterance(text);
+            u.lang = 'de-DE'; u.rate = 1.0; u.pitch = 0.7;
+            const voices = window.speechSynthesis.getVoices();
+            const male = voices.find(v => /Conrad|Hans|Stefan|David/i.test(v.name) && v.lang.startsWith('de'))
+                      || voices.find(v => v.lang.startsWith('de'));
+            if (male) u.voice = male;
+            u.onend = () => { isSpeaking = false; setHologramState(0); playNextTTS(); };
+            u.onerror = () => { isSpeaking = false; setHologramState(0); playNextTTS(); };
+            window.speechSynthesis.speak(u);
+        } catch (e2) {
+            isSpeaking = false;
+            setHologramState(0);
+            playNextTTS();
         }
     }
-
-    window.speechSynthesis.speak(utterance);
 }
 
 // ============================================
@@ -532,8 +562,17 @@ function setupEventListeners() {
             chatInput.value = '';
             chatInput.blur();
             if (isListening && recognition) recognition.stop();
-            document.getElementById('camera-iframe').src = '';
-            document.getElementById('camera-overlay').style.display = 'none';
+            const frame = document.querySelector('.camera-frame');
+            if (frame) {
+                const img = frame.querySelector('img');
+                if (img && img._refreshInterval) clearInterval(img._refreshInterval);
+                frame.innerHTML = '';
+            }
+            const overlay = document.getElementById('camera-overlay');
+            if (overlay) overlay.style.display = 'none';
+            // TTS stoppen
+            if (audioEl) { audioEl.pause(); audioEl.src = ''; }
+            ttsQueue = []; isSpeaking = false; setHologramState(0);
         }
     });
 }

@@ -152,6 +152,29 @@ def api_presentation_download(filename):
     return send_file(path, as_attachment=True, download_name=filename)
 
 
+@app.route("/api/tts")
+def api_tts():
+    """Server-seitiges TTS - gibt MP3 zurueck (Edge Neural, feste maennliche Stimme)."""
+    text = request.args.get("text", "").strip()
+    if not text:
+        return jsonify({"error": "Kein Text"}), 400
+    if len(text) > 2000:
+        text = text[:2000]
+    try:
+        from modules.tts_server import synthesize
+        audio = synthesize(text)
+        if not audio or len(audio) < 100:
+            return jsonify({"error": "TTS fehlgeschlagen"}), 500
+        from flask import Response
+        return Response(audio, mimetype="audio/mpeg", headers={
+            "Content-Length": str(len(audio)),
+            "Cache-Control": "public, max-age=3600",
+        })
+    except Exception as e:
+        log.error(f"TTS API Fehler: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
 @socketio.on("connect")
 def handle_connect():
     """Client verbunden."""
